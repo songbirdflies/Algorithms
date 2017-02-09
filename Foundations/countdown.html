@@ -1,0 +1,38 @@
+
+<html>
+<head>
+	<title>Javascript Practice 12.8.16</title>
+	<script>
+
+	function countdown(num){
+		while (num > 0){
+			if(num%4 == 0){
+				console.log(num);
+			}
+			num--;
+		}
+	}
+
+	//countdown(2016);
+
+
+	function countdown4(num4){
+
+		for (var i = num4; i > 0; i--){
+			if(i%4 == 0){
+				console.log(i);
+			}
+		}
+
+	}
+
+	countdown4(2016);
+
+	</script>
+</head>
+
+<body>
+Countdown By Fours<br>
+Log positive numbers starting at 2016, counting down by fours (exclude 0), without a FOR loop.
+</body>
+</html>

@@ -1,0 +1,124 @@
+<html>
+<head>
+	<title>Javascript Practice 2.6.17</title>
+	<script>
+
+/*var m = [
+       0    1    2    3
+    0['A', 'B', 'C', 'D'],
+    1['E', 'F', 'G', 'H'],
+    2['I', 'J', 'K', 'L'],
+    3['M', 'N', 'O', 'P']
+];*/
+
+var array = [
+    ['A', 'B', 'C', 'D'],
+    ['E', 'F', 'G', 'H'],
+    ['I', 'J', 'K', 'L'],
+    ['M', 'N', 'O', 'P']
+];
+
+var a = [
+    ['A', 'E', 'I', 'M'],
+    ['B', 'F', 'J', 'N'],
+    ['C', 'G', 'K', 'O'],
+    ['D', 'H', 'L', 'P']
+];
+
+function print(m) {
+    for(var i = 0; i < m.length; i++){
+        console.log(m[i]);
+    }
+}
+
+//print(m);
+transpose(array);
+print(array);
+
+
+function transpose(array){
+	 var temp = [];
+	 var temp1 = [];
+	 var temp2 = [];
+	 
+    for(var i = 0; i < array.length; i++){
+			//iterate through 1st array 
+			//console.log(m[i]);
+        for(var j=0; j < array[i].length; j++){
+        	
+            //i = 0;
+            //j = 1;
+            //letter = 'B';            
+            //console.log(array[i][j], '->', array[j][i]);    
+           	if ([i] == 0 && [j] > 0){
+           	temp = array[i][j]
+           	console.log(temp);
+
+           	}
+           	if ([i] == 1 && [j] > 1){
+           	temp1 = array[i][j]
+           	//console.log(temp1);
+           	}
+           	if ([i] == 2 && [j] > 2){
+           	temp2 = array[i][j]
+           	//console.log(temp2);
+           	}
+           	array[i][j] = array[j][i]; 
+           	if ([j] == 0 && [i] > 0){
+           		console.log(array[1][0]);
+           	}
+
+           	//array.push(temp);
+           	
+           	/*array.push(array[j][i]);
+           	console.log(array);*/
+         	//m[i][j] = m[j][i];
+         	//m[j][i] = temp;
+      }
+      
+    }
+}
+
+/*function transpose(array) {
+  var result = [];
+  var tempArr = [];
+  var xIndex = 0;
+  var yIndex = 0;
+  for (var i = 0; i < array.length; i++) {
+    for (var j = 0; j < array[i].length; j++) {
+      // push the column value into temp array to create each row for result 
+      tempArr.push(array[xIndex][yIndex]);
+      // xIndex represents each row in the m array, so we want to increment
+      // that index for each iteration. 
+      // below is where we increment xIndex to get the next value in the next index in the m array
+      // at the same yIndex index. You'll notice we keep yIndex the same until we are ready to move
+      // to the next set of subarrays to push
+      xIndex++;
+      // once we get temparr length to equal 4, we want to push that into result array as a subarray
+      if (tempArr.length === 4) {
+        result.push(tempArr);
+        // we now want to clear tempArr to handle the next set of arrays
+        tempArr = [];
+        // we'll also want to restart xIndex at 0 to start at the first row again of m array
+        xIndex = 0;
+      }
+    }
+    // each outer iteration we need to increment yIndex so we can move to the next column in m array
+    yIndex++;
+  }
+console.log('result: ', result);
+return result;
+
+}*/
+
+
+
+//on a call 
+	</script>
+
+</head>
+
+<body>
+Transpose colum to row.
+</body>
+</html>

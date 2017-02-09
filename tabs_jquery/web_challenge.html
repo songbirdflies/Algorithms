@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+      <meta charset="UTF-8">
+	  <title>Tabs</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script type="text/javascript">
+      $(document).ready(function(){
+         
+         //on click of ul.tabs li, create #link for tab-num
+         $('ul.tabs li').click(function(){
+            var tab_id = $(this).attr('data-tab');
+
+            //remove active on all tabs
+            $('ul.tabs li').removeClass('active');
+            $('.tabcontent').removeClass('active');
+
+            //add active class to tab-num selected
+            $(this).addClass('active');
+            $("#"+tab_id).addClass('active');
+         })
+
+      })
+
+      </script>
+   </head>
+   <body>
+   	<div>
+         <ul class="tabs">
+            <li class="tablinks active" data-tab="tab-1"></li>
+            <li class="tablinks" data-tab="tab-2"></li>
+         </ul>
+            
+         <div id="tab-1" class="tabcontent active">
+            test
+         </div>
+         <div id="tab-2" class="tabcontent">
+            test 2
+         </div>		
+		</div>
+
+
+
+	</body>
+</html>

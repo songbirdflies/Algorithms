@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Javascript Practice 12.9.16</title>
+	<script>
+
+function evensOdds (arr){
+	var odds = 0;
+	var evens = 0
+
+	for (var i = 0; i < arr.length; i++) {
+		if(arr[i]%2 == 0){
+			evens += 1;
+		}
+		else {
+			odds += 1;
+		}
+	};
+	if (odds > 2){
+		console.log("That's odd!");
+	}
+	if (evens > 2){
+		console.log("Even more so!");
+	}
+
+}
+
+
+evensOdds([2,3,-5,12,10,14,17])
+
+	</script>
+
+</head>
+
+<body>
+Evens and Odds<br>
+Create a function that accepts an array. Every time that array has three odd values in a row, print "That’s odd!" Every time the array has three evens in a row, print "Even more so!"
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Javascript Practice 12.9.16</title>
+	<script>
+
+
+function hungry (arr){
+
+/*	var result = '';
+
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i] === 'food') {
+			result += 'Yummy! '
+		}
+	}
+
+	if (result === '') {
+		return "I'm hungry!";
+	} else {
+		return result;
+	}*/
+
+	var foundFood = false;
+	var food = 'food';
+
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i] === food) {
+			foundFood = true;
+		}
+	}
+
+	if (foundFood) {
+		console.log("yummy");
+	} else {
+		console.log("I'm hungry");
+	}
+
+	/*arr.find("food");
+	console.log("")
+
+	for (var i = 0; i < arr.length; i++) {
+		if(arr[i] == "food"){
+			console.log("yummy!");
+		}
+	};*/
+}
+	
+var list1 = ["apple", "banana", "food", "ice cream", "food"];
+var list2 = ["blah", "boo", "monkeys"];
+
+console.log('this is list1: ', hungry(list1));
+console.log('this is list2: ', hungry(list2));
+
+// hungry(["food", "apple", "banana", "carrot", "food"]);
+// hungry(["stuff", "notFood", "banana"]);
+
+	</script>
+
+</head>
+
+<body>
+Always Hungry<br>
+Create a function that accepts an array, and prints "yummy" each time one of the values is equal to "food". If no array elements are "food", then print "I'm hungry" once.
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title>Javascript Practice 1.16.16</title>
+	<script>
+
+/*function XinY (arr, x, y){
+
+		arr.splice(y,0,x);
+		console.log(arr);
+}*/
+var testArr2 = [1, 3, 5, 7];
+
+function insertWithoutSplice(array, x, y) {
+  var newArray = [];
+  for (var i = 0; i <= y; i++) {
+    if (i === y) {
+      newArray[y] = x;
+      //newArray[2] = 10;
+    } else {
+      newArray[i] = array[i];
+      //newArray[0] = array[0];
+    };
+  };
+
+  for (var j = y; j < array.length; j++) {
+    newArray[j + 1] = array[j];
+  };
+
+  console.log(newArray);
+  return newArray;
+};
+
+
+insertWithoutSplice(testArr2, 10, 2);
+
+function XinY (arr, x, y){
+	arr.push(0);
+
+	for (var i = arr.length-1; i > y; i--) {
+		arr[i] = arr[i-1];
+	}
+	
+	arr[y] = x;
+	console.log(arr);
+}
+
+var array = [1, 3, 5, 7]; 
+var X = 10;
+var Y = 2;
+
+XinY(array, X, Y);
+
+	</script>
+
+</head>
+
+<body>
+Assignment: Insert X in Y<br>
+Write a program that inserts a new number X at an index Y. For example if array = [1, 3, 5, 7] and X = 10, and Y = 2, by the end of your program array should be [1, 3, 10, 5, 7] (in other words we added '10' on index 2). Check the output of your array once your program is completed to make sure it's working correctly.
+</body>
+</html>

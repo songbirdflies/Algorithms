@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Javascript Practice 12.11.16</title>
+	<script>
+
+function negative (arr){
+
+	for (var i = 0; i < arr.length; i++) {
+		if(arr[i] < 0){
+			continue;
+		}
+		else{
+			//arr[i] = arr[i] - (arr[i]*2);
+			arr[i] = -Math.abs(arr[i]);
+		}
+	};
+	console.log(arr);
+}
+	
+
+negative([3,-1,6,-4,2]);
+
+	</script>
+
+</head>
+
+<body>
+Outlook: Negative<br>
+Given an array, create and return a new one containing all the values of the provided array, made negative (not simply multiplied by -1).
+</body>
+</html>

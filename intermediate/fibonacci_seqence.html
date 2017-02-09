@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>Javascript Practice 12.8.16</title>
+	<script>
+
+	function Fibonacci(){
+		
+		this.looping = function(n){
+			var a = 0; b = 1; f = 1;
+			for (var i = 2; i <= n; i++){
+				f = a+b;
+				a = b;
+				b = f;
+			}
+			return f;
+		};
+
+		this.recursive = function(){
+
+		};
+	}
+	
+	var fibonacciSequence = '';
+	var f = new Fibonacci();
+	
+	for (var i = 1; i<=15; i++){
+		fibonacciSequence += f.looping(i) + " ";
+	}
+	console.log(fibonacciSequence);
+
+	</script>
+</head>
+
+<body>
+
+
+
+</body>
+</html>

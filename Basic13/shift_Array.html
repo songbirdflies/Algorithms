@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Javascript Practice 12.9.16</title>
+	<script>
+
+function shiftArray(arr){	
+	var arrnew = arr;
+	arrnew.shift();
+	arrnew.push(0);
+	console.log(arrnew);
+}
+
+/*
+function shiftArray(arr){	
+
+	for (var i = 0; i < arr.length-1; i++) {
+		arr[i] = arr[i+1];
+	};
+	arr[arr.length-1] = 0;
+	console.log(arr);
+}*/
+
+shiftArray([3,5,6,9,13]);
+
+
+
+	</script>
+
+</head>
+
+<body>
+Shift Array Values<br>
+Given an array, move all values forward by one index, dropping the first and leaving a '0' value at the end.
+
+</body>
+</html>

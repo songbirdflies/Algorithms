@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Javascript Practice 12.9.16</title>
+	<script>
+
+function printAnother (arr){
+	var first_odd = 0;
+	var second2last = arr[arr.length-2];
+
+	for (var i = 0; i < arr.length; i++) {
+		
+		if (arr[i]%2 !==0) {
+			first_odd = arr[i]; 
+			break;
+		}
+	};
+	console.log(first_odd);
+	console.log(second2last);
+}
+
+
+printAnother([2,3,5,12,10])
+
+	</script>
+
+</head>
+
+<body>
+Print One, Return Another<br>
+Build a function that takes array of numbers. The function should print second-to-last value in the array, and return first odd value in the array.
+</body>
+</html>

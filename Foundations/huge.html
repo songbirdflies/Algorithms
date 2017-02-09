@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Javascript Practice 12.8.16</title>
+	<script>
+
+	function huge(num1, num2){
+		var sum = 0;
+		for(var i = num1; i<= num2; i++){
+			if(i%2 !==0){
+				sum += i;
+			}
+		}
+		console.log(sum);
+	}
+
+	huge(-300000, 300000);
+	
+	</script>
+</head>
+
+<body>
+Whoa, That Sucker’s Huge…<br>
+Add odd integers from -300,000 to 300,000, and console.log the final sum. Is there a shortcut?
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Javascript Practice 12.12.16</title>
+	<script>
+
+	function lastFew (arr, num) {
+
+		var remainder = arr.length - num;
+		//console.log(remainder);
+
+		for (var i = 0; i < arr.length; i++) {
+			if (arr[i] < arr[remainder]){
+				arr.shift();
+			}
+		};
+		
+		console.log(arr);
+	}
+
+
+/* Arayla's Way
+   function lastFew(arr, x) {
+  var result = [];
+  var countdown = arr.length - x; 
+
+  for (var i = arr.length - 1; i >= countdown; i--) {
+    result.unshift(arr[i]);
+  }
+
+  return result;
+}
+*/
+	lastFew([2,4,6,8,10],3);
+	lastFew([2,4,6,8,10,12,14,16,18,20],5);
+
+	</script>
+
+</head>
+
+<body>
+Only Keep the Last Few<br>
+Stan learned something today: that reducing an array’s .length immediately shortens it by that amount. Given array arr and number X, remove all except the last X elements, and return arr (changed and shorter). Given ([2,4,6,8,10],3), change the given array to [6,8,10] and return it.
+</body>
+</html>

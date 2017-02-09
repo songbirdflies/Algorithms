@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>Javascript Practice 12.9.16</title>
+	<script>
+
+function mergeSort(arr){
+	if (arr.length < 2){
+		return arr;
+	}
+	var middle = Math.floor(arr.length/2);
+	var left = arr.slice(0, middle);
+	var right = arr.slice(middle, arr.length);
+
+	return merge(mergeSort(left), mergeSort(right));
+}
+
+function merge(left, right){
+	var result = [];
+
+	while (left.length > 0 && right.length > 0){
+		if(left[0] <= right[0]){
+			result.push(left.shift());
+		}
+		else{
+			result.push(right.shift());
+		}
+	}
+	while (left.length){
+			result.push(left.shift());
+		}
+	while (right.length){
+			result.push(right.shift())
+		}
+	
+	return result;
+}
+
+
+var test = [10,15, 2, 22, 11, 9, 18, 8, 17];
+console.log(mergeSort(test));
+
+
+	</script>
+
+</head>
+
+<body>
+Merge Sort<br>
+If the list is of length 0 or 1, then it is already sorted. Otherwise:
+Divide the unsorted list into two sublists of about half the size.
+Sort each sublist recursively by re-applying merge sort.
+Merge the two sublists back into one sorted list.
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Javascript Practice 12.8.16</title>
+	<script>
+
+function first_Length (arr){	
+	var sum = 0;
+
+		if(isNaN(arr[0])){
+			return(false);
+		}
+		else {
+			sum = arr[0]+arr.length;
+			console.log(sum);
+		}
+}
+
+first_Length([8,9]);
+first_Length(["animals",9]);
+
+
+
+	</script>
+
+</head>
+
+<body>
+First Plus Length<br>
+Given an array, return the sum of the first value in the array, plus the array’s length. What happens if the array’s first value is not a number, but a string (like "what?") or a boolean (like false).
+</body>
+</html>

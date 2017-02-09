@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Javascript Practice 12.8.16</title>
+	<script>
+
+	function yourBirthday(MM, DD) {
+		if (MM == 4 && DD == 11){
+			console.log("How did you know it's my birthday?");
+		}
+		else if (DD == 4 && MM == 11){
+			console.log("It's almost my birthday!");
+		}
+		else {
+			console.log("It's just another day...");
+		}
+		
+	}; 	
+
+	yourBirthday(4,11);
+	yourBirthday(11,4);
+	yourBirthday(3,14);
+
+	</script>
+</head>
+
+<body>
+You Say It’s Your Birthday<br>
+If 2 given numbers represent your birth month and day in either order, log "How did you know?", else log "Just another day....",
+
+Example: given yourBirthday(4,19) or yourBirthday(19,4)
+</body>
+</html>

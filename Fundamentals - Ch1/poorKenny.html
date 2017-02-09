@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Javascript Practice 12.17.16</title>
+	<script>
+
+
+
+function whatHappensToday (){
+	var number = Math.random() * 30;
+	var name = "Kenny";
+
+	if (number < 10){
+		console.log(name + " fell into a volcano.");
+	}
+	else if (number < 15){
+		console.log(name + " got swallowed by a tsunami.");
+	}
+	else if ( number < 20){
+		console.log(name + " fell down in an earthquake.");
+	}
+	else if (number < 25){
+		console.log(name + " got trapped in a blizzard.");
+	}
+	else if (number < 30){
+		console.log(name + " got hit by a meteor.");
+	}
+
+}
+
+	whatHappensToday();
+	
+	</script>
+
+</head>
+
+<body>
+Poor Kenny<br>
+Kenny tries to stay safe, but somehow everyday something happens. If there is a 10% chance of volcano, 15% chance of tsunami, 20% chance of earthquake, 25% chance of blizzard, and 30% chance of meteor strike, write function whatHappensToday() to print the outcome.
+</body>
+</html>

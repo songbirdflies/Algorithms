@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Javascript Practice 12.19.16</title>
+	<script>
+
+
+
+function prevLengths (arr){
+
+	for (var i = 0; i < arr.length; i++) {
+		var temp = arr[i].length;
+		arr[i] = temp;
+	};
+	arr.shift();
+	console.log(arr);
+
+}
+
+prevLengths(["replace", "each", "string", "with", "a", "number"]);
+//lengths: 7, 4, 6, 4, 1, 6
+//returns: 4,6,4,1,6
+	
+	</script>
+
+</head>
+
+<body>
+Previous Lengths<br>
+You are passed an array containing strings. Working within that same array, replace each string with a number – the length of the string at previous array index – and return the array.
+</body>
+</html>

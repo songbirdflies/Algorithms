@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Javascript Practice 12.17.16</title>
+	<script>
+
+
+
+function whatReallyHappensToday (){
+	var number = Math.random() * 30;
+	var name = "Kenny";
+	console.log(number);
+
+	if (number < 10){
+		console.log(name + " fell into a volcano.");
+	}
+	if (number < 15){
+		console.log(name + " got swallowed by a tsunami.");
+	}
+	if ( number < 20){
+		console.log(name + " fell down in an earthquake.");
+	}
+	if (number < 25){
+		console.log(name + " got trapped in a blizzard.");
+	}
+	if (number < 30){
+		console.log(name + " got hit by a meteor.");
+	}
+
+}
+
+	whatReallyHappensToday();
+	
+	</script>
+
+</head>
+
+<body>
+Poor Kenny<br>
+Kenny tries to stay safe, but somehow everyday something happens. If there is a 10% chance of volcano, 15% chance of tsunami, 20% chance of earthquake, 25% chance of blizzard, and 30% chance of meteor strike, write function whatHappensToday() to print the outcome.
+<p>
+What Really Happened?<br>
+Kyle (smarter than Kenny) notes that the chance of one disaster is totally unrelated to the chance of another. Change whatHappensToday() function to create whatReallyHappensToday(). In this new function test for each disaster independently, instead of assuming exactly one disaster will happen. In other words, with this new function, all five might occur today – or none. Maybe Kenny will survive!
+</body>
+</html>

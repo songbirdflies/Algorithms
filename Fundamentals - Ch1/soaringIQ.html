@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>Javascript Practice 12.17.16</title>
+	<script>
+
+
+
+function soaringIQ (name, iq, days){
+
+	var value = 0;
+
+	for (var i = 1; i <= days; i++) {
+		var rate = i/100;
+		value += rate;
+	
+	};
+	console.log(value);
+	newIQ = iq + value;
+	//console.log(newIQ);
+	console.log(name + " has a new IQ of " + newIQ +".")
+}
+
+	soaringIQ("Bogdan", 101, 98);
+	soaringIQ("Song", 100, 4);
+	
+	</script>
+
+</head>
+
+<body>
+Soaring IQ<br>
+Your time with us will definitely make you smarter! Let’s say a new Dojo student, Bogdan, entered with a modest IQ of 101. How smart would Bogdan be at the end of the bootcamp, if his IQ rose by .01 on the first day, then went up by an additional .02 on the second day, up by .03 more on the third day, etc…. all the way until increasing by .98 on his 98th day (the end of 14 full weeks)?
+</body>
+</html>
