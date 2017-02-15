@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title>Javascript Practice 2.14.17</title>
+	<script>
+
+function tellTime(){
+	var currentTime = new Date(), 
+		hours = currentTime.getHours(), 
+		minutes = currentTime.getMinutes(), 
+		month = currentTime.getMonth() +1,
+		day = currentTime.getDate(),
+		year = currentTime.getFullYear();
+
+		if (minutes < 10) {
+			minutes = "0" + minutes;
+		}
+
+		var suffix = "AM";
+		if (hours >= 12){
+			suffix = "PM";
+			hours = hours - 12;
+		}
+		if (hours == 0){
+				hours = 12;
+			}
+	var time = " at " + hours + ":" + minutes + " " + suffix;
+	var date = "The date is " + month + "/" + day + "/" + year;
+	var display = date + time;
+	document.getElementById("displayDate").innerHTML = display;
+}
+
+//tellTime();
+
+    function currentDate (){
+     		var date = new Date();
+    		document.getElementById("displayDate").innerHTML = date;
+		}
+
+
+	</script>
+
+</head>
+
+<body>
+<p>Create a program that will tell you the time.</p>
+<button onclick="tellTime()">Try it</button>
+
+<p id="displayDate"></p>
+</body>
+</html>
