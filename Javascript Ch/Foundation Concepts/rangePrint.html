@@ -1,17 +1,32 @@
 <html>
 <head>
-	<title>Javascript Practice 2.14.17</title>
+	<title>Javascript Practice 2.16.17</title>
 	<script>
 
 
 
 
-    function rangePrint(){
-
+    function rangePrint(start, end, skip){
+        if(start && !end){
+                for (var j = 0; j < start; j++) {
+                    console.log(j);
+                };
+            }
+        for (var i = start; i < end; i++) {
+            if(!skip){
+                console.log(i);
+            }
+            if (i % skip == 0 ){
+                console.log(i);
+            }
+        };
+    
+       
     }
 
     rangePrint(2,10,2);
-   
+    rangePrint(4,8);
+    rangePrint(4);
 
 
 	</script>
