@@ -3,15 +3,30 @@
 	<title>Javascript Practice 2.14.17</title>
 	<script>
 
-function tilBirthday(){
-	if 
-}
 
 
-    function currentDate (){
-     		var date = new Date();
-    		document.getElementById("displayDate").innerHTML = date;
-		}
+	//set the date we're counting to
+	var birthday = "April 11, 2017";
+
+	 
+	function getTimeRemaining(endtime){
+		//Find the distance between now and count down date
+		var t = Date.parse(endtime) - Date.parse(new Date());
+		//Time calculations for days, hours, minutes, and seconds
+		var seconds = Math.floor( (t/1000) % 60 );
+		var minutes = Math.floor( (t/1000/60) % 60 );
+		var hours = Math.floor( (t/(1000*60*60)) % 24 );
+		var days = Math.floor( (t/1000*60*60*24) );
+		return {
+			'total': t,
+			'days': days,
+			'hours': hours,
+			'minutes': minutes, 
+			'seconds': seconds
+		};
+	}
+
+	getTimeRemaining(birthday).days;
 
 
 	</script>
