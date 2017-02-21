@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>Javascript Practice 2.20.17</title>
+	<script>
+
+
+
+
+   function fancyArray(arr){
+   	for (var i = 0; i < arr.length; i++) {
+   		console.log(
+   			i + " -> " + arr[i]
+   		);
+   	};
+
+   }
+
+   var names = ["James", "Jill", "Jane", "Jack"];
+   fancyArray(names);
+
+	</script>
+
+</head>
+
+<body>
+<h1 id="fancy-array">Fancy Array</h1><p>Normally, if you print an array such as <code>["James", "Jill", "Jane", "Jack"]</code>, you will see the following:</p>
+<pre>[ "James", "Jill", "Jane", "Jack" ]
+</pre><p>Let's make it look fancy! Write a function that will make it print like:</p>
+<pre>0 -&gt; James
+1 -&gt; Jill
+2 -&gt; Jane
+3 -&gt; Jack
+</pre><p>Bonus (Only If You Have Time):</p><ul><li>Let the user pass in the symbol that will print (ex: "-&gt;", "=&gt;", "::", "-----")</li><li>Have an extra parameter <code>reversed</code>. If the user passes <code>true</code>, print the elements in reverse order</li></ul>
+
+
+
+
+</body>
+</html>
