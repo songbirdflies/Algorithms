@@ -7,11 +7,26 @@
 
 
     function randomChance(num){
-    	var outcome = Math.random((Math.floor()*100) + 1);
+    	var player = Math.floor((Math.random()*100) + 1);
+    	console.log("Player number is " + player);
+    	var winningNumber = Math.floor((Math.random()*100) + 1);
+    	console.log("Winning number is " + winningNumber);
+    	if (player == winningNumber){
+    		num += 100;
+    		console.log("You hit the Jackpot! You now have " + num + " quarters.");
+    	}
+    	else if (player >= (winningNumber-20) && player <= (winningNumber+20)){
+    		num += Math.floor((Math.random()*50) + 1);
+    		console.log("You won! You now have " + num + " quarters.");
+    	}
+    	else {
+    		num -= Math.floor((Math.random()*num) + 1);
+    		console.log("You lost. You now have " + num + " quarters.");
+    	}
 
     }
 
-    rangePrint(2,10,2);
+    randomChance(20);
    
 
 
