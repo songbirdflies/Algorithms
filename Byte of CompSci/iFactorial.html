@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>Javascript Practice 2.27.17</title>
+	<script>
+
+	function iFactorial(num){
+     	var output = 1;
+     	for (var i = 1; i <= num; i++) {
+     		output *= i;
+     		 
+     	};
+     	console.log(output);
+     }
+
+     function iFactorial2(num){
+     	var output = 1;
+     	for (var i = num; i >= 1; i--) {
+     		output += (i-1) * output;
+     		 
+     	};
+     	console.log(output);
+     }
+
+     iFactorial(5);
+     //iFactorial(30);
+
+	</script>
+
+</head>
+
+<body>
+
+
+<h1>iFactorial</h1>
+<p>Write a function iFactorial that behaves like the following:</p>
+
+<pre>
+iFactorial(1) = 1                  => 1
+iFactorial(2) = 2 * 1              => 2
+iFactorial(3) = 3 * 2 * 1          => 6
+iFactorial(4) = 4 * 3 * 2 * 1      => 24
+iFactorial(5) = 5 * 4 * 3 * 2 * 1  => 120
+</pre>
+<p>Make sure your solution is iterative and not recursive.</p>
+
+
+</body>
+</html>

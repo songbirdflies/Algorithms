@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title>Javascript Practice 2.26.17</title>
+	<script>
+
+
+	
+    function rSum(num){
+    	if (num === 1) {
+    		return 1;
+    	} else {
+    		return rSum(num-1) + num;
+    	}
+    }
+
+     console.log(rSum(5));
+   
+     function iSum(num){
+     	var output = 0;
+     	for (var i = 1; i <= num; i++) {
+     		 output += i;
+     	};
+     	console.log(output);
+     }
+
+     iSum(5);
+     iSum(30);
+
+	</script>
+
+</head>
+
+<body>
+
+
+<h1>Recursion & iSum</h1>
+<p>Recursive functions call itself within its own implementation. This can be done when the problem can be solved by being broken down to smaller versions of the same solution until it hits the base case. Base case is when the problem becomes so small, we can get some return value from it. It's much easier to explain with an example.</p>
+
+<pre>
+rSum(1) = 1                  => 1  **BASE CASE**
+rSum(2) = rSum(1) + 2        => 3
+rSum(3) = rSum(2) + 3        => 6
+rSum(4) = rSum(3) + 4        => 10
+rSum(5) = rSum(4) + 5        => 15
+</pre>
+<p>Go ahead and implement a function iSum that behaves just like rSum but instead of using recursion to implement the solution it uses iteration.</p>
+
+
+</body>
+</html>
